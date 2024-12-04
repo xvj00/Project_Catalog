@@ -263,6 +263,11 @@ button.prev:hover, button.next:hover {
   background-color: #014155;
 }
 
+.sale-badge {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
 
 
 .header-menu-container{

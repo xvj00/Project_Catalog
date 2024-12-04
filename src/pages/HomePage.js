@@ -1,30 +1,36 @@
 import React, { useState } from "react";
-import Catalog from "../components/Catalog"
-
+import Catalog from "../components/Catalog";
+import Filter from "../components/Filter";
 import Slider from "../components/Slider";
 
-
-
 const HomePage = () => {
-    const categories = [
-        "Новинки", "Распродажа", "Протеины", "Креатин", "BCAA", "Аминокислоты", "Гейнер", "Изотоники"
-    ];
+    const [searchQuery, setSearchQuery] = useState(''); // Стейт для поиска
+
+    const handleSearch = (query) => {
+        setSearchQuery(query); // Обновление поискового запроса при выборе категории
+        console.log('Фильтрация по:', query);
+    };
+
+    const handleReturn = () => {
+        setSearchQuery(''); // Очистка поиска
+        console.log('Возврат на главную');
+    };
+
     return (
         <div>
             <div className="hero">
                 <Slider />
             </div>
+
             <div className="main-container size">
-                <div className="sidebar">
-                    <h2>Категории</h2>
-                    <ul>
-                        {categories.map((category, index) => (
-                            <li key={index}>{category}</li>
-                        ))}
-                    </ul>
-                </div>
-           
-            <Catalog />
+                {/* Компонент фильтрации */}
+                <Filter 
+                    onSearch={handleSearch} 
+                    onReturn={handleReturn} 
+                />
+
+                {/* Каталог товаров с фильтрацией */}
+                <Catalog searchQuery={searchQuery} />
             </div>
         </div>
     );
