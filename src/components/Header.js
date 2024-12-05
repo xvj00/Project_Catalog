@@ -19,8 +19,9 @@ const Header = () => {
             </div>
           </div>
           <div className="header-icons">
-            <img className="icon-heart" src="img/heart.svg" />
-            <img className="icon-cart" src="img/card.svg" />
+          <Link to="/heart" className="heart" ><img className="icon-heart" src="img/heart.svg" /></Link>
+            <Link to="/cart" className="cart" ><img className="icon-cart" src="img/cart.svg" /></Link>
+        
           </div>
         </div>
       </div>

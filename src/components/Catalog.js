@@ -1,4 +1,7 @@
-const Catalog = ({ searchQuery }) => {
+import React, {useState} from "react";
+
+
+const Catalog = ({ searchQuery, cart, addToCart}) => {
   const generateProducts = (count) => {
     const placeholderNames = ['Креатин', 'BCAA', 'Протеин', 'Гейнер', 'Изотоник', 'Аминокислоты' , 'Изотоник'];
     const placeholderImages = ['img/image.png'];
@@ -40,7 +43,7 @@ const Catalog = ({ searchQuery }) => {
             <div className="price_buttons">
               <p>{product.price} ₽</p>
               <img className="add-to-favorites" src="./img/black_heart.svg" alt="Добавить в избранное" />
-              <button className="add-to-cart">В корзину</button>
+              <button className="add-to-cart" onClick={() => addToCart(product)}>В корзину</button>
             </div>
           </div>
         ))}
