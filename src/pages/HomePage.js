@@ -13,7 +13,6 @@ const HomePage = () => {
 
     const handleReturn = () => {
         setSearchQuery(''); // Очистка поиска
-        console.log('Возврат на главную');
     };
 
     return (

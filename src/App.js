@@ -5,7 +5,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import CartPage from './pages/CartPage'
+import AboutPage from './pages/AboutPage';
 
 // Основной компонент приложения
 function App() {
@@ -14,7 +14,7 @@ function App() {
             <Header /> 
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path='/cart' element={<CartPage/>} />
+                <Route path='/about' element={<AboutPage />} />
                 {/* Ваши другие маршруты можно добавить сюда, например: */}
                 {/* <Route path="/about" element={<AboutPage />} /> */}
             </Routes>
