@@ -88,5 +88,23 @@ const products = [
 
     ]
 
+products.forEach(product => {
+    if (product.name.includes('Протеины')) {
+        product.image = './img/protein.png';
+    } else if (product.name.includes('Креатин')) {
+        product.image = './img/image.png';
+    } else if (product.name.includes('BCAA')) {
+        product.image = './img/bcaa.png';
+    } else if (product.name.includes('Аминокислоты')) {
+        product.image = './img/amino.png';
+    } else if (product.name.includes('Гейнер')) {
+        product.image = './img/gainer.png';
+    } else if (product.name.includes('Изотоники')) {
+        product.image = './img/powerbar_isotonic.png';
+    } else {
+        product.image = './img/default_image.png'; // Изображение по умолчанию
+    }
+});
+
 
 export default products
