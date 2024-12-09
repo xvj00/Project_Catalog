@@ -4,7 +4,7 @@ const products = [
         name: 'Optimum Nutrition Протеины',
         rating: 5,
         price: 3200,
-        image: './img/image.png',
+
         sale: false,
         new: true,
     },
@@ -13,7 +13,7 @@ const products = [
         name: 'MyProtein Креатин',
         rating: 5,
         price: 1530,
-        image: './img/image.png',
+
         sale: true,
         new: false,
     },
@@ -22,7 +22,7 @@ const products = [
         name: 'Scitec Nutrition BCAA',
         rating: 4,
         price: 1350,
-        image: './img/image.png',
+
 
         sale: true,
         new: true,
@@ -32,7 +32,7 @@ const products = [
         name: 'Biotech USA Аминокислоты',
         rating: 5,
         price: 2100,
-        image: './img/image.png',
+
 
         sale: false,
         new: false,
@@ -42,7 +42,7 @@ const products = [
         name: 'MuscleTech Гейнер',
         rating: 4,
         price: 2850,
-        image: './img/image.png',
+
 
         sale: false,
         new: true,
@@ -52,7 +52,7 @@ const products = [
         name: 'PowerBar Изотоники',
         rating: 4,
         price: 970,
-        image: './img/image.png',
+
 
         sale: false,
         new: false,
@@ -62,7 +62,7 @@ const products = [
         name: 'ON Креатин и BCAA',
         rating: 5,
         price: 1900,
-        image:'./img/image.png',
+
 
         sale: false,
         new:true
@@ -72,7 +72,7 @@ const products = [
         name: 'Optimum Nutrition Протеины',
         rating: 5,
         price: 3200,
-        image: './img/image.png',
+
         sale: false,
         new: true,
     },
@@ -81,7 +81,7 @@ const products = [
         name: 'MyProtein Креатин',
         rating: 5,
         price: 1530,
-        image: './img/image.png',
+
         sale: true,
         new: false,
     }
@@ -90,19 +90,19 @@ const products = [
 
 products.forEach(product => {
     if (product.name.includes('Протеины')) {
-        product.image = './img/protein.png';
+        product.image = '/img/protein.png';
     } else if (product.name.includes('Креатин')) {
-        product.image = './img/image.png';
+        product.image = '/img/image.png';
     } else if (product.name.includes('BCAA')) {
-        product.image = './img/bcaa.png';
+        product.image = '/img/bcaa.png';
     } else if (product.name.includes('Аминокислоты')) {
-        product.image = './img/amino.png';
+        product.image = '/img/amino.png';
     } else if (product.name.includes('Гейнер')) {
-        product.image = './img/gainer.png';
+        product.image = '/img/gainer.png';
     } else if (product.name.includes('Изотоники')) {
-        product.image = './img/powerbar_isotonic.png';
+        product.image = '/img/powerbar_isotonic.png';
     } else {
-        product.image = './img/default_image.png'; // Изображение по умолчанию
+        product.image = '/img/default_image.png'; // Изображение по умолчанию
     }
 });
 

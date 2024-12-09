@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import products from "../DataProduct";
+import {Link} from "react-router-dom";
 
 const Catalog = ({searchQuery}) => {
-
 
 
     const filteredProducts = products.filter((product) => {
@@ -28,9 +28,10 @@ const Catalog = ({searchQuery}) => {
                         </div>
                         <div className="price_buttons">
                             <p>{product.price} ₽</p>
-                            <img className="add-to-favorites" src={"./img/black_heart.svg"} alt="Добавить в избранное"/>
-                            <button className="add-to-cart" onClick={() => console.log(product)}>Заказать звонок
-                            </button>
+                            <Link to={`/product/${product.id}`}>
+                                <button className="add-to-cart" onClick={() => console.log(product)}>Подробнее
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 ))}

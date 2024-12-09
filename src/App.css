@@ -129,17 +129,17 @@ h2 {
 
 .activeSlide {
     opacity: 1; /* Показать активный слайд */
-    transform: translateX(0); /* Сдвиг по X */
+
     z-index: 10; /* Переместить на передний план */
 }
 
 .lastSlide {
-    transform: translateX(-100%); /* Сдвиг влево */
+
     z-index: 1;
 }
 
 .nextSlide {
-    transform: translateX(100%); /* Сдвиг вправо */
+
     z-index: 1;
 }
 /* Контейнер для навигации */
@@ -298,13 +298,10 @@ button.prev:hover, button.next:hover {
     color: white;
     border: none;
     padding: 10px;
-    margin-top: 10px;
-    width: 60%;
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
 }
-
 .price_buttons {
     display: flex;
     justify-content: space-between;
