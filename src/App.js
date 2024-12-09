@@ -10,10 +10,10 @@ import AboutPage from './pages/AboutPage';
 
 
 // Основной компонент приложения
-function App() {
+function App({children}) {
     return (
         <BrowserRouter>
-            <Header /> 
+            <Header/>
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path='/about' element={<AboutPage />} />
@@ -21,8 +21,12 @@ function App() {
                 {/* Ваши другие маршруты можно добавить сюда, например: */}
                 {/* <Route path="/about" element={<AboutPage />} /> */}
             </Routes>
+
+
             <Footer />
+
         </BrowserRouter>
+
     );
 }
 

@@ -19,8 +19,8 @@ const Catalog = ({searchQuery}) => {
                 {filteredProducts.map((product) => (
                     <div className="product-item" key={product.id}>
                         <img src={product.image} alt={product.name} className="product-image"/>
-                        {product.new && <span className="sale-badge">Новинка!</span>}
-                        {product.sale && <span className="sale-badge">Распродажа!</span>}
+                        {product.new && <span className="badge-new badge">Новинка!</span>}
+                        {product.sale && <span className="badge-sale badge">Распродажа!</span>}
 
                         <h3>{product.name}</h3>
                         <div className="rating">

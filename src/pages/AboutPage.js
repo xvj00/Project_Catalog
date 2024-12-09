@@ -68,11 +68,12 @@ const AboutPage = () => {
                     <li><strong>Ознакомительные наборы</strong>, чтобы вы могли попробовать разные продукты и
                         выбрать свой любимый.
                     </li>
-                    <iframe width="1273" height="716" src="https://www.youtube.com/embed/O9jX1hvTyzQ"
-                            title="Магазин спортивного питания «Geneticshop»" frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
                 </ul>
+                <iframe width="100%" height="716" src="https://www.youtube.com/embed/O9jX1hvTyzQ"
+                        title="Магазин спортивного питания «Geneticshop»" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
                 <h2 className="about-page-subtitle">И это еще не все...</h2>
                 <p className="about-page-text">

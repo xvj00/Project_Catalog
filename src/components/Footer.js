@@ -7,8 +7,6 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-container size">
-
-
                 <div className="footer__column">
                     <h3>Помощь</h3>
                     <ul>
