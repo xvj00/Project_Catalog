@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import products from "../DataProduct";
 import {Link} from "react-router-dom";
+import "./Catalog.css"
 
 const Catalog = ({searchQuery}) => {
 
@@ -18,24 +19,24 @@ const Catalog = ({searchQuery}) => {
             <div className="product-list">
                 {filteredProducts.map((product) => (
 
-                        <div className="product-item" key={product.id}>
-
+                    <div className="product-item" key={product.id}>
                             <img src={product.image} alt={product.name} className="product-image"/>
-                            {product.new && <span className="badge-new badge">Новинка!</span>}
-                            {product.sale && <span className="badge-sale badge">Распродажа!</span>}
+                        {product.new && <span className="badge-new badge">Новинка!</span>}
+                        {product.sale && <span className="badge-sale badge">Распродажа!</span>}
 
-                            <h3>{product.name}</h3>
-                            <div className="rating">
-                                {'★'.repeat(product.rating)}{'☆'.repeat(5 - product.rating)}
-                            </div>
-                            <div className="price_buttons">
-                                <p>{product.price} ₽</p>
-                                <Link to={`/product/${product.id}`}>
-                                    <button className="add-to-cart" onClick={() => console.log(product)}>Подробнее
-                                    </button>
-                                </Link>
-                            </div>
+                        <h3>{product.name}</h3>
+                        <div className="rating">
+                            {'★'.repeat(product.rating)}{'☆'.repeat(5 - product.rating)}
                         </div>
+                        <div className="price_buttons">
+                            <p>{product.price} ₽</p>
+                            <Link to={`/product/${product.id}`}>
+                                <button className="add-to-cart" onClick={() => console.log(product)}>Подробнее
+                                </button>
+                            </Link>
+                        </div>
+
+                    </div>
                 ))}
             </div>
         </div>

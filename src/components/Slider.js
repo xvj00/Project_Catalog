@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import data from "../dataImg";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import './Slider.css';
 
 const Slider = () => {
     const [sliderImage, setSliderImage] = useState(data);
