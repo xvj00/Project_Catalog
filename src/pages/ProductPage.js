@@ -31,8 +31,9 @@ const ProductPage = () => {
                     <input type="email" id="email" name="email" required/>
                 </div>
                 <div className="modal-footer">
-                    <button type="button" id="closeModal" onClick={closeModal} className="btn btn-close">Закрыть</button>
-                    <button type="submit" className="btn btn-primary" >Отправить заявку</button>
+                    <button type="button" id="closeModal" onClick={closeModal} className="btn btn-close">Закрыть
+                    </button>
+                    <button type="submit" className="btn btn-primary">Отправить заявку</button>
                 </div>
             </form>
         </div>
@@ -42,35 +43,51 @@ const ProductPage = () => {
         return <div>Продукт не найден.</div>; // Обработка случая, если продукт не найден
     }
     return (
-     <div className="product-container size">
-         <Link to={'/'}>
-             <button className="add-to-cart">
-                 Назад
-             </button>
-         </Link>
-         <div className="product-details">
-             <img src={product.image} alt={product.name} className="product-image-full"/>
+        <div className="size">
+            <div className="product-card size">
+                <Link to={'/'}>
+                    <button className="back">
+                        Назад
+                    </button>
+                </Link>
+                <div className="product-details">
+                    <img src={product.image} alt={product.name} className="product-image-full"/>
 
-             <div className="product-info">
-                 <h1>{product.name}</h1>
-                 <div className="details">
-                     <p className="description">{product.description}</p>
-                     <div className="rating">
-                         {'★'.repeat(product.rating)}{'☆'.repeat(5 - product.rating)}
-                     </div>
-                     <p className="price">Цена: {product.price} ₽</p>
-                     {product.new && <span className="badge badge-new">Новинка!</span>}
-                     {product.sale && <span className="badge badge-sale">Распродажа!</span>}
-                     <button className="order-call-button" onClick={openModal}>
-                         Заказать звонок
-                     </button>
-                 </div>
-             </div>
+                    <div className="product-info">
+                        <h1>{product.name}</h1>
+                        <div className="rating">
+                            {'★'.repeat(product.rating)}{'☆'.repeat(5 - product.rating)}
+                        </div>
+                        <p>      {product.new && <span className="badge badge-new">Новинка!</span>}
+                            {product.sale && <span className="badge badge-sale">Распродажа!</span>}</p>
 
-         </div>
-         <Modal
-             style={{
-                 overlay: {
+                        <div className="details">
+                            <div>
+                                <ul>
+                                    {product.settings.map((setting) => (
+                                        <div>
+                                            <li>Вкус: {setting.vkys}</li>
+                                            <li>Тип: {setting.type}</li>
+                                            <li>Объем: {setting.v} мл</li>
+                                            <li>Формат выпуска: {setting.format}</li>
+                                        </div>
+                                    ))}
+                                </ul>
+                            </div>
+                            <p className="description">{product.description}</p>
+
+                            <p className="price">Цена: {product.price} ₽</p>
+                            <button className="order-call-button" onClick={openModal}>
+                                Заказать звонок
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <Modal
+                style={{
+                    overlay: {
                         backgroundColor: "rgba(0, 0, 0, 0.5)",
                     },
                     content: {

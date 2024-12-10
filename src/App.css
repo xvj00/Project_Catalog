@@ -59,6 +59,7 @@ h2 {
 }
 
 .footer {
+    margin-top: 50px;
     background-color: #01151B; /* Тёмный фон */
     color: white;
 }
@@ -221,33 +222,35 @@ button.prev:hover, button.next:hover {
 
 .about-page {
     margin: 50px auto;
-    padding: 20px;
+    padding: 50px;
     background-color: #ffffff;
     box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.25);
 }
 
-.about-page-title {
+.page-title {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.about-page-subtitle {
+.page-subtitle {
     font-size: 1.5em;
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.about-page-text {
+.page-text {
     margin-bottom: 20px;
 }
 
-.about-page-list {
+.page-list {
+    padding-left: 80px;
     margin-bottom: 20px;
 }
 
-.about-page-list li {
+.page-list li {
+
     margin-bottom: 10px;
 }
 
@@ -431,4 +434,120 @@ button.prev:hover, button.next:hover {
     background-color: #e25b12;
 }
 
+.description{
+    max-width: 700px;
+}
 
+.rating{
+    font-size: 30px;
+}
+
+.price{
+    font-size: 30px;
+}
+.banner{
+    width: 100%;
+}
+.product-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 55px;
+    box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: center;
+
+}
+
+.product-image-full {
+    width: auto;
+    height: 500px;
+    border-radius: 8px;
+}
+
+.product-info {
+    margin-left: 40px;
+}
+
+.product-info h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #ffa500;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.details {
+    margin-top: 20px;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details li {
+    margin-bottom: 5px;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.order-call-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.back {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-close {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+}

@@ -4,12 +4,9 @@ const AboutPage = () => {
 
     return (
         <div className="about-us size">
-            {/* Компонент фильтрации */}
-            {/*<h1>О нас</h1>*/}
-
             <div className="about-page">
-                <h1 className="about-page-title">Кто мы?</h1>
-                <p className="about-page-text">
+                <h1 className="page-title">Кто мы?</h1>
+                <p className="page-text">
                     Мы – команда из Набережных Челнов. Под брендом <strong>Спортпит и Точка</strong> мы с 2015 года
                     разрабатываем и производим спортивное питание на современном оборудовании, расположенном в
                     Татарстане.
@@ -18,18 +15,18 @@ const AboutPage = () => {
                     цене превосходит зарубежные аналоги и идеально подходит российским покупателям.
                 </p>
 
-                <h2 className="about-page-subtitle">Кто наши покупатели?</h2>
-                <ul className="about-page-list">
+                <h2 className="page-subtitle">Кто наши покупатели?</h2>
+                <ul className="page-list">
                     <li>Профессиональные спортсмены, бодибилдеры и пауэрлифтеры, чемпионы России и мира.</li>
                     <li>Любители фитнеса, стремящиеся улучшить форму или сохранить физическую активность.</li>
                     <li>Приверженцы здорового образа жизни, которые хотят сделать свое тело лучше и сильнее.</li>
                 </ul>
 
-                <h2 className="about-page-subtitle">Как мы этого добиваемся?</h2>
-                <p className="about-page-text">
+                <h2 className="page-subtitle">Как мы этого добиваемся?</h2>
+                <p className="page-text">
                     Мы делаем ставку на качество и надежность:
                 </p>
-                <ul className="about-page-list">
+                <ul className="page-list">
                     <li>Закупаем сырье напрямую у проверенных поставщиков из России, Европы и других стран.</li>
                     <li>Производим спортивное питание на собственной сертифицированной площадке с системой контроля
                         качества HACCP.
@@ -42,8 +39,8 @@ const AboutPage = () => {
                     </li>
                 </ul>
 
-                <h2 className="about-page-subtitle">Что для нас важно?</h2>
-                <ul className="about-page-list">
+                <h2 className="page-subtitle">Что для нас важно?</h2>
+                <ul className="page-list">
                     <li>Учитывать тренды и выпускать актуальные и проверенные продукты.</li>
                     <li>Прислушиваться к рекомендациям профессионалов: тренеров, диетологов и спортсменов.</li>
                     <li>Использовать проверенные временем технологии производства и многолетний опыт наших
@@ -54,8 +51,8 @@ const AboutPage = () => {
                     </li>
                 </ul>
 
-                <h2 className="about-page-subtitle">Что мы предлагаем?</h2>
-                <ul className="about-page-list">
+                <h2 className="page-subtitle">Что мы предлагаем?</h2>
+                <ul className="page-list">
                     <li><strong>Протеины</strong> более чем в десяти вкусовых вариантах – насыщенные, мягкие и
                         идеально подходящие для любого способа приготовления.
                     </li>
@@ -75,15 +72,15 @@ const AboutPage = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
-                <h2 className="about-page-subtitle">И это еще не все...</h2>
-                <p className="about-page-text">
+                <h2 className="page-subtitle">И это еще не все...</h2>
+                <p className="page-text">
                     Мы заботимся о наших клиентах, предлагая доступные цены и удобную доставку. На нашем сайте
                     регулярно проходят акции, розыгрыши и скидки.
                     Мы также проводим обучающие вебинары и прямые эфиры, где делимся советами по питанию и
                     тренировкам. Наши эксперты – диетологи, тренеры и спортсмены – всегда готовы помочь с выбором и
                     ответить на любые вопросы.
                 </p>
-                <p className="about-page-text">
+                <p className="page-text">
                     Все это мы делаем для того, чтобы вы могли меняться к лучшему вместе с <strong>Спортпит и
                     Точка</strong>!
                 </p>

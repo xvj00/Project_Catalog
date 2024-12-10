@@ -1,4 +1,4 @@
-// src/App.js
+
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';  // Убираем ненужные импорты
 import './App.css';
@@ -7,10 +7,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import PromotionPage from "./pages/PromotionPage";
 
 
 // Основной компонент приложения
-function App({children}) {
+function App() {
     return (
         <BrowserRouter>
             <Header/>
@@ -18,6 +19,7 @@ function App({children}) {
                 <Route path="/" element={<HomePage />} />
                 <Route path='/about' element={<AboutPage />} />
                 <Route path="/product/:id" element={<ProductPage/>} />
+                <Route path="/promotion" element={<PromotionPage/>}/>
                 {/* Ваши другие маршруты можно добавить сюда, например: */}
                 {/* <Route path="/about" element={<AboutPage />} /> */}
             </Routes>

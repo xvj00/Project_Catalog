@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import "../App.css";
+import "./Header.css"
 
 const Header = () => {
     return (
@@ -30,7 +31,7 @@ const Header = () => {
                     <ul className="nav-list">
                         <li className="nav-element"><Link to="/">Главная</Link></li>
                         <li className="nav-element"><Link to="/about">О нас</Link></li>
-                        <li className="nav-element"><Link to="/sale">Акция</Link></li>
+                        <li className="nav-element"><Link to="/promotion">Акция</Link></li>
                         <li className="nav-element"><Link to="/delivery">Доставка</Link></li>
                         <li className="nav-element"><Link to="/partners">Стать партнером</Link></li>
                         <li className="nav-element"><Link to="/orders">Где забрать заказ</Link></li>

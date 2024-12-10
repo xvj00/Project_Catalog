@@ -1,0 +1,35 @@
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header-contacts {
+    display: flex;
+    gap: 10px
+}
+
+.phone-icon {
+    margin-right: 5px;
+    /* Добавьте стили для иконки телефона */
+}
+
+.header__time {
+    font-size: 0.9em;
+    color: #ccc; /* Более светлый цвет текста */
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px
+}
+
+.header__favorites,
+.header__cart {
+    color: white;
+    cursor: pointer;
+}
