@@ -65,10 +65,10 @@ const ProductPage = () => {
                             <div>
                                 <ul>
                                     {product.settings.map((setting) => (
-                                        <div>
+                                        <div key={product.id}>
                                             <li>Вкус: {setting.vkys}</li>
                                             <li>Тип: {setting.type}</li>
-                                            <li>Объем: {setting.v} мл</li>
+                                            <li>Объем: {setting.v}</li>
                                             <li>Формат выпуска: {setting.format}</li>
                                         </div>
                                     ))}
@@ -97,7 +97,7 @@ const ProductPage = () => {
                         bottom: "auto",
                         marginRight: "-50%",
                         transform: "translate(-50%, -50%)",
-                        width: "30%",
+                        width: "20%",
                         padding: "20px",
                         borderRadius: "10px",
                     },

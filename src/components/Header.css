@@ -10,7 +10,14 @@
 
 .header-contacts {
     display: flex;
+    align-items: center;
     gap: 10px
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    margin:0;
 }
 
 .phone-icon {

@@ -15,7 +15,8 @@ const Filter = ({onSearch, onReturn}) => {
     const handleCategoryClick = (categoryQuery) => {
         if (onSearch) {
             onSearch(categoryQuery); // Передаем query в onSearch для фильтрации
-        } else {
+        }
+        else {
             console.error('Функция onSearch не передана в Filter.');
         }
     };
@@ -29,6 +30,7 @@ const Filter = ({onSearch, onReturn}) => {
                         {category.label}
                     </li>
                 ))}
+
             </ul>
             <button onClick={onReturn}>Сбросить</button>
         </div>

@@ -1,0 +1,41 @@
+
+.footer {
+    margin-top: 50px;
+    background-color: #01151B; /* Тёмный фон */
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.footer h3 {
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.footer ul li:hover {
+    color: #fff; /* Подсветка при наведении */
+}
+
+.footer__contacts li {
+    margin: 20px 0;
+}
+
+.footer__contacts li:hover {
+    color: #f4f4f4;
+}

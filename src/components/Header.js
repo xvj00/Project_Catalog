@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import "../App.css";
+/*import "../App.css";*/
 import "./Header.css"
 
 const Header = () => {
@@ -13,9 +13,10 @@ const Header = () => {
 
                         </div>
                         <div className="header-contacts">
-                            <img className="icon-phone" src="img/tel.svg"/>
+
+                            <a href="tel:709062281337"><img className="icon-phone" src="img/tel.svg"/></a>
                             <div className="text-container">
-                                <p>+7 (906) 228-13-37</p>
+                                <a href="tel:709062281337"><p>+7 (906) 228-13-37</p></a>
                                 <p>Пн-Пт с 9:00 до 18:00 (МСК)</p>
                             </div>
                         </div>
