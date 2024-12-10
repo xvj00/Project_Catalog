@@ -479,3 +479,17 @@ button.prev:hover, button.next:hover {
     color: #333;
     border: none;
 }
+.stock {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.in-stock {
+    color: green; /* Зелёный цвет для товаров в наличии */
+}
+
+.out-of-stock {
+    color: red; /* Красный цвет для отсутствующих товаров */
+    text-decoration: line-through; /* Зачёркнутый текст */
+}
