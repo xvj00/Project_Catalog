@@ -75,7 +75,6 @@ const ProductPage = () => {
                                 </ul>
                             </div>
                             <p className="description">{product.description}</p>
-                            <p className={product.stock > 0 ? 'in-stock' : 'out-of-stock'}> {product.stock > 0 ? 'В наличии' : 'Нет в наличии'}</p>
                             <p className="price">Цена: {product.price} ₽</p>
                             <button className="order-call-button" onClick={openModal}>
                                 Заказать звонок

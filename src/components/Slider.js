@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import data from "../dataImg";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import './style/Slider.css';
@@ -14,7 +14,13 @@ const Slider = () => {
     const handleNext = () => {
         setIndex((prevState) => (prevState + 1) % sliderImage.length);
     };
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prevState) => (prevState + 1) % sliderImage.length);
+        }, 10000);
 
+        return () => clearInterval(interval); // Очистка таймера при размонтировании компонента
+    }, [sliderImage.length]);
 
 
 

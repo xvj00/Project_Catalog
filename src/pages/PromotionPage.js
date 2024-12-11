@@ -3,51 +3,50 @@ import '../App.css'; // Импортируем стили
 
 
 const PromotionPage = () => {
+    const promotions = [
+        {
+            id: 1,
+            title: "Подарок за покупку",
+            description: "При заказе на сумму от 5000 рублей получите шейкер в подарок!",
+            image: "img/sheyker-be-first-color1.jpg"
+        },
+        {
+            id: 2,
+            title: "Rule 1 скидка 15%",
+            description: "Rule1 по выгодным ценам",
+            image: "/img/rule1.png",
+        },
+        {
+            id: 3,
+            title: "Повышенный кешбэк",
+            description: "Товары с повышенным кешбэком",
+            image: "/img/cashback.jpg",
+        },
+    ];
+
     return (
-        <div className="about-us size">
-            <div className="about-page size">
-                <div className="promotion-page-content">
-                    <h1 className="page-title">Акции и Специальные Предложения</h1>
-                    <p className="page-text">
-                        Добро пожаловать на страницу акций "СпортПит и Точка"! Мы рады предложить вам лучшие
-                        предложения на спортивное питание, которые помогут вам достичь ваших целей в фитнесе и спорте.
-                    </p>
+        <div className="about-page size">
+            <h1 className="page-title ">Акции</h1>
+            <div className="promotions ">
 
-                    {/* Баннер 1 */}
-                    <img src="/img/banners/banner1.jpg" alt="Акция 1" className="banner size"/>
-
-                    <h2 className="page-subtitle">Текущие Акции:</h2>
-                    <ul className="page-list">
-                        <li>
-                            <strong>Скидка 20% на все протеиновые порошки!</strong>
-                            Примените код <em>PROTEIN20</em> при оформлении заказа. Акция действует до конца месяца.
-                        </li>
-                        <li>
-                            <strong>Купи 2, получи 1 бесплатно!</strong>
-                            При покупке любых двух товаров из категории "Энергетики" третий в подарок.
-                        </li>
-                        <li>
-                            <strong>Бесплатная доставка</strong>
-                            на заказы от 3000 рублей. Успейте воспользоваться предложением!
-                        </li>
-                    </ul>
-
-                    {/* Баннер 2 */}
-                    <img src="/img/banners/banner1.jpg" alt="Акция 2" className="banner size"/>
-
-                    <h2 className="page-subtitle">Почему выбирают нас?</h2>
-                    <p className="page-text">
-                        Мы гарантируем высокое качество наших продуктов, разработанных с учетом потребностей
-                        российских спортсменов. Наша команда постоянно работает над новыми формулами и улучшением
-                        существующих продуктов, чтобы вы могли быть уверены в их эффективности.
-                    </p>
-
-                    <h2 className="page-subtitle">Следите за новостями</h2>
-                    <p className="page-text">
-                        Подписывайтесь на наши социальные сети и будьте в курсе последних акций и новинок!
-                    </p>
-                </div>
+                {promotions.map((promo) => (
+                    <div key={promo.id} className="promotion-card">
+                        <img src={promo.image} alt={promo.title} className="promotion-image"/>
+                        <h3>{promo.title}</h3>
+                        <p>{promo.description}</p>
+                    </div>
+                ))}
             </div>
+            <footer className="newsletter  ">
+                <p>
+                    Подпишись на рассылку и моментально получи скидку 10% на заказ
+                    Продолжая, вы даёте <a href="#">согласие на обработку</a> персональных данных.
+                </p>
+                <form className="newsletter-form">
+                    <input type="email" placeholder="Введите ваш e-mail"/>
+                    <button type="submit">Подписаться</button>
+                </form>
+            </footer>
         </div>
     );
 }

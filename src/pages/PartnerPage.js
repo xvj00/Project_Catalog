@@ -19,21 +19,25 @@ const PartnerPage = () => {
             </ul>
 
             <h2 className="page-subtitle">Заполните форму для подачи заявки</h2>
-            <form id="contactForm">
-                <div className="form-group">
-                    <label htmlFor="name">Имя:</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="phone">Телефон:</label>
-                    <input type="tel" id="phone" name="phone" required />
-                </div>
-                <button type="submit" className="add-to-cart">Отправить заявку</button>
-            </form>
+            <div className="form-container">
+                <form id="contactForm">
+                    <div className="form-group">
+                        <label htmlFor="name">Имя:</label>
+                        <input type="text" id="name" name="name" required minLength="2"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="phone">Номер телефона:</label>
+                        <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9\-\s]+$"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Электронная почта:</label>
+                        <input type="email" id="email" name="email" required/>
+                    </div>
+
+                        <button type="submit" className="btn">Отправить заявку</button>
+
+                </form>
+            </div>
         </div>
     );
 }

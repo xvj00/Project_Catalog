@@ -21,7 +21,7 @@ const HomePage = () => {
                 <Slider />
             </div>
 
-            <div className="main-container size">
+            <div className="catalog-container size">
                 {/* Компонент фильтрации */}
                 <Filter 
                     onSearch={handleSearch} 

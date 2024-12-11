@@ -5,6 +5,22 @@
     font-weight: normal;
     font-style: normal;
 }
+
+button{
+    padding: 10px;
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #cc5200;
+    transition: all 0.3s ease;
+}
+
 h1, h2, h3 {
     font-weight: 500;
 }
@@ -12,16 +28,11 @@ h1, h2, h3 {
 h2 {
     font-size: 40px;
 }
-
-#root {
-    background-color: #F3F3F3;
-}
-
 .size {
     max-width: 1680px;
     margin: 0 auto;
 }
-.main-container {
+.catalog-container {
     display: grid;
     grid-template-columns: 0.3fr 1.5fr;
     gap: 0px 20px;
@@ -29,9 +40,7 @@ h2 {
 }
 .about-page {
     margin: 50px auto;
-    padding: 50px;
-    background-color: #ffffff;
-    box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.25);
+
 }
 
 .page-title {
@@ -64,7 +73,7 @@ h2 {
 .product-container {
     background-color: #ffffff;
     /*padding: 80px 55px;*/
-    box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .product-details{
@@ -92,15 +101,17 @@ h2 {
     color: #ff9800;
 }
 
-.add-to-cart {
-    background-color: #01151B;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-}
+
+
+/*.add-to-cart {*/
+/*    background-color: #01151B;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 10px;*/
+/*    cursor: pointer;*/
+/*    border-radius: 5px;*/
+/*    font-size: 14px;*/
+/*}*/
 .price_buttons {
     display: flex;
     justify-content: space-between;
@@ -126,29 +137,10 @@ h2 {
     background: #e74c3c;
 }
 
-.header-menu-container {
-    padding: 10px;
-    color: white;
-    background-color: #01151B;
-}
 
-.header-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-list {
-    margin: 20px 0;
-    display: flex;
-    gap: 50px;
-    list-style: none;
-    padding: 0;
-}
-.nav-element > a {
-    font-weight: 500;
-    color: #000000;
-    text-decoration: none;
+.form-container{
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 #contactForm {
@@ -230,7 +222,7 @@ h2 {
     align-items: center;
     margin-top: 40px;
     padding: 55px;
-    box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .product-details {
@@ -286,56 +278,115 @@ h2 {
 .price {
     font-size: 24px;
     font-weight: bold;
-    margin-top: 20px;
+    margin: 20px auto;
 }
 
-.order-call-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-.back {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 20px;
+
+.promotions {
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    flex-wrap: wrap;
+    padding: 50px;
+    background-color: #ffffff;
 }
 
-.btn {
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
+.promotion-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    max-width: 300px;
+    color: #00553F;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+.promotion-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.btn-close {
-    background-color: #ccc;
-    color: #333;
-    border: none;
+.newsletter {
+    padding: 50px;
+    border-top: #00553F 1px solid;
+    text-align: center;
 }
-.stock {
-    font-size: 16px;
+
+.newsletter a{
+    color: #00553F;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    width: 20%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Одна колонка по умолчанию */
+    gap: 20px; /* Промежуток между карточками */
+}
+
+@media (min-width: 768px) {
+    .locations-grid {
+        grid-template-columns: 1fr 1fr; /* Две колонки на средних экранах */
+    }
+}
+
+@media (min-width: 1024px) {
+    .locations-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* Три колонки на больших экранах */
+    }
+}
+
+.location-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.location-city {
+    font-size: 1.5em;
     font-weight: bold;
-    margin: 10px 0;
+    margin-bottom: 8px;
 }
 
-.in-stock {
-    color: green; /* Зелёный цвет для товаров в наличии */
+.location-address {
+    color: #666666;
+    margin-bottom: 16px;
 }
 
-.out-of-stock {
-    color: red; /* Красный цвет для отсутствующих товаров */
-    text-decoration: line-through; /* Зачёркнутый текст */
+.location-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.location-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    color: #28a745;
+}
+
+.location-hours,
+.location-phone {
+    color: #666666;
 }

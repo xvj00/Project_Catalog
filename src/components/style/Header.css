@@ -3,6 +3,33 @@
     align-items: center;
 }
 
+.header-menu-container {
+    padding: 10px;
+    color: white;
+    background-color: #00553F;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    margin: 20px 0;
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-element > a {
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+}
+
+
 .header__logo img {
     height: 40px;
     margin-right: 10px;
@@ -14,10 +41,10 @@
     gap: 10px
 }
 
-a{
+a {
     text-decoration: none;
     color: #ffffff;
-    margin:0;
+    margin: 0;
 }
 
 .phone-icon {

@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import PromotionPage from "./pages/PromotionPage";
 import PartnerPage from "./pages/PartnerPage";
+import LocationPage from "./pages/LocationPage";
 
 
 // Основной компонент приложения
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/product/:id" element={<ProductPage/>} />
                 <Route path="/promotion" element={<PromotionPage/>}/>
                 <Route path="/partners" element={<PartnerPage/>}/>
+                <Route path="/location" element={<LocationPage/>}/>
                 {/* Ваши другие маршруты можно добавить сюда, например: */}
             </Routes>
 

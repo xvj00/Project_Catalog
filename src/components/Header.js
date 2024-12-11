@@ -34,7 +34,7 @@ const Header = () => {
                         <li className="nav-element"><Link to="/about">О нас</Link></li>
                         <li className="nav-element"><Link to="/promotion">Акция</Link></li>
                         <li className="nav-element"><Link to="/partners">Стать партнером</Link></li>
-                        <li className="nav-element"><Link to="/orders">Где забрать заказ</Link></li>
+                        <li className="nav-element"><Link to="/location">Где забрать заказ</Link></li>
                     </ul>
                 </nav>
             </header>
