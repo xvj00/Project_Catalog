@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import products from "../DataProduct";
 import {Link} from "react-router-dom";
-import "./Catalog.css"
+import "./style/Catalog.css"
 
 const Catalog = ({searchQuery}) => {
 
@@ -20,9 +20,13 @@ const Catalog = ({searchQuery}) => {
                 {filteredProducts.map((product) => (
 
                     <div className="product-item" key={product.id}>
-                            <img src={product.image} alt={product.name} className="product-image"/>
-                        {product.new && <span className="badge-new badge">Новинка!</span>}
-                        {product.sale && <span className="badge-sale badge">Распродажа!</span>}
+
+                        <p className="badge">
+                            {product.new && <span className="badge-new badge">Новинка!</span>}
+                            {product.sale && <span className="badge-sale badge">Распродажа!</span>}
+                        </p>
+                        <img src={product.image} alt={product.name} className="product-image"/>
+
 
                         <h3>{product.name}</h3>
                         <div className="rating">

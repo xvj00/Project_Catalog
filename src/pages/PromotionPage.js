@@ -5,7 +5,7 @@ import '../App.css'; // Импортируем стили
 const PromotionPage = () => {
     return (
         <div className="about-us size">
-            <div className="about-page">
+            <div className="about-page size">
                 <div className="promotion-page-content">
                     <h1 className="page-title">Акции и Специальные Предложения</h1>
                     <p className="page-text">

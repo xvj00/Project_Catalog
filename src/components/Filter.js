@@ -1,5 +1,5 @@
 import React from 'react';
-import './Filter.css';
+import './style/Filter.css';
 
 const Filter = ({onSearch, onReturn}) => {
     const categories = [
