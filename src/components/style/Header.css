@@ -61,6 +61,9 @@ a {
     display: flex;
     gap: 20px
 }
+.header-icons ul{
+    list-style: none;
+}
 
 .header__favorites,
 .header__cart {

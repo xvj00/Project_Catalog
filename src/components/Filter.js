@@ -32,8 +32,9 @@ const Filter = ({onSearch, onReturn}) => {
                     </li>
                 ))}
 
+                <button onClick={onReturn}>Сбросить</button>
             </ul>
-            <button onClick={onReturn}>Сбросить</button>
+
         </div>
     );
 };

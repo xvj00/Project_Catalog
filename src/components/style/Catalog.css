@@ -9,15 +9,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: solid #c8baba 1px;
-    border-left: 0;
-    background-color: white;
+
     padding: 15px;
     min-height: 400px;
     transition: all 0.2s ease;
 }
 
 .product-item:hover {
+    background:white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     scale: 1.02;
     transition: all 0.2s ease;

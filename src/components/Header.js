@@ -21,8 +21,11 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="header-icons">
-                            <Link to="/heart" className="heart"><img className="icon-heart" src="img/heart.svg"/></Link>
-                            <Link to="/cart" className="cart"><img className="icon-cart" src="img/cart.svg"/></Link>
+                            <ul className="footer__social">
+                                <li><a href="https://vk.com/"><img src="img/vk.svg"/></a></li>
+                                <li><a href="https://t.me/xvjss"><img src="img/telegram.svg"/></a></li>
+
+                            </ul>
 
                         </div>
                     </div>

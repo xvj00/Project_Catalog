@@ -23,10 +23,15 @@ const Footer = () => {
                         <Link to="/about">
                             <li>О нас</li>
                         </Link>
-                        <li>Магазины</li>
-                        <li>Новости</li>
-                        <li>Гарантия лучшей цены</li>
-                        <li>Товары партнеров</li>
+                        <Link to="/promotion">
+                            <li>Акция</li>
+                        </Link>
+                        <Link to="/partners#partner">
+                            <li>Стать партнером</li>
+                        </Link>
+                        <Link to="/location">
+                            <li>Где забрать заказ</li>
+                        </Link>
                     </ul>
                 </div>
                 <div className="footer__column">

@@ -1,7 +1,7 @@
 .Slider {
     position: relative;
     min-height: 300px;
-    height: 600px; /* Высота слайдера */
+    height: 800px; /* Высота слайдера */
     display: flex;
     justify-content: center;
     overflow: hidden; /* Скрыть элементы, выходящие за пределы контейнера */

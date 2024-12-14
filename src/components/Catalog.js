@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import products from "../DataProduct";
 import {Link} from "react-router-dom";
 import "./style/Catalog.css"
+import ScrollReveal from "scrollreveal";
 
 const Catalog = ({searchQuery}) => {
 
@@ -14,12 +15,22 @@ const Catalog = ({searchQuery}) => {
         return matchesName || matchesSale || matchesNew;
     });
 
+    useEffect(() => {
+        // Инициализация ScrollReveal
+        ScrollReveal().reveal(".reveal", {
+            duration: 1000,
+            distance: "100px",
+            origin: "bottom",
+            delay: 300,
+        });
+    }, []);
+
     return (
         <div className="product-container">
             <div className="product-list">
                 {filteredProducts.map((product) => (
 
-                    <div className="product-item" key={product.id}>
+                    <div className="product-item reveal" key={product.id}>
 
                         <p className="badge">
                             {product.new && <span className="badge-new badge">Новинка!</span>}
