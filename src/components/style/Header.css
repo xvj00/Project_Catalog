@@ -70,3 +70,69 @@ a {
     color: white;
     cursor: pointer;
 }
+
+/* Стили для бургер-меню (открывающееся меню) */
+.bm-menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 280px; /* Ширина меню */
+}
+
+.bm-menu {
+    background: #00553F; /* Фон бургер-меню */
+    padding: 2.5em 1.5em 0; /* Отступы внутри меню */
+    font-size: 1.15em;
+}
+
+.bm-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bm-item-list a {
+    text-decoration: none;
+    color: #ffffff; /* Цвет ссылок в меню */
+    font-weight: 500;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.bm-item-list a:hover {
+    color: #00ffcc; /* Цвет при наведении на ссылки */
+}
+
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Прозрачный фон при открытии меню */
+}
+
+.hamburger-react{
+    display: none;
+}
+/* Для маленьких экранов (бургер-меню) */
+@media(max-width: 1000px) {
+    .hamburger-react {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .header-menu{
+        align-items: inherit;
+    }
+
+    .header-nav.hidden, .header-icons, .header-contacts {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+

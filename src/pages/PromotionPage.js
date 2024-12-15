@@ -15,10 +15,10 @@ const PromotionsPage = () => {
 
     return (
         <div className="promotions">
-            <div className="promotions-hero reveal">
+            <div className="promotions-hero ">
                 <div className="hero-txt size">
-                    <h1 className="page-title">Наши акции</h1>
-                    <p className="page-text">
+                    <h1 className="page-title reveal">Наши акции</h1>
+                    <p className="page-text reveal">
                         Следите за нашими специальными предложениями и акциями, чтобы покупать качественные продукты по
                         выгодным ценам!
                         Мы регулярно обновляем список акций, чтобы вы могли выбрать то, что подходит именно вам.

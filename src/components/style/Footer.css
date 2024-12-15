@@ -50,3 +50,17 @@
     height: 40px;
     cursor: pointer;
 }
+
+@media(max-width: 1000px){
+
+    .footer__social{
+        justify-content: center;
+    }
+    .footer-container{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer-container{
+        text-align: center;
+    }
+}

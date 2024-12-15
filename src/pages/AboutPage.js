@@ -16,18 +16,18 @@ const AboutPage = () => {
     return (
         <div className="about-us">
             <div className="about-page">
-                <section className="about-hero reveal">
+                <section className="about-hero ">
                     <div className="hero-txt size">
-                        <h1 className="page-title">Кто мы?</h1>
+                        <h1 className="page-title reveal">Кто мы?</h1>
                         <div className="page-text_container">
-                            <p className="page-text">
+                            <p className="page-text reveal">
                                 Мы – команда из Набережных Челнов. Под брендом <strong>Спортпит и Точка</strong> мы с
                                 2015 года
                                 разрабатываем и производим спортивное питание на современном оборудовании, расположенном
                                 в
                                 Татарстане.
                             </p>
-                            <p className="page-text">
+                            <p className="page-text reveal">
                                 Наша миссия – создавать продукты, которые помогают людям достигать своих целей и
                                 вдохновляют
                                 их на новые достижения.

@@ -30,7 +30,7 @@ h2 {
 }
 
 .size {
-    max-width: 1680px;
+    max-width: 1366px;
     margin: 0 auto;
 }
 
@@ -42,6 +42,7 @@ h2 {
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 20px;
+    width: 40%;
 }
 
 .page-subtitle {
@@ -370,6 +371,7 @@ h2 {
     margin:100px auto;
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 .divider-line{
@@ -483,3 +485,56 @@ h2 {
     background-image: url("../public/img/promotion-3.jpg");
 }
 
+
+
+@media (max-width: 1000px) {
+    .size{
+        max-width: 500px;
+    }
+
+    h1, .page-title, .hero-txt h1{
+        font-size: 60px;
+        width: 100%;
+    }
+
+    h2, .page-subtitle{
+        font-size: 40px;
+    }
+    p, .page-text{
+        font-size: 20px;
+    }
+
+    .map-overlay{
+        width: auto;
+        padding: 20px;
+        left: 0;
+        right: 0;
+    }
+
+
+    .promotions-hero, .partner-hero,.about-hero, .leader, .divider, .product-details{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .product-card{
+        padding: 10px;
+    }
+    .product-info{
+        margin: 0;
+    }
+
+    .hero-txt {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-container{
+        width: auto;
+        padding: 20px;
+    }
+
+    .partner-hero p, .promotions-hero p, .about-hero p, .company-values p, .page-text_container p, .leader-text p, .divider-line, .divider img, .leader img, .page-text_container, contact-box p, contact-box h2{
+        width: 100%;
+    }
+
+}

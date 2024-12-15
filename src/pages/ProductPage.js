@@ -96,7 +96,6 @@ const ProductPage = () => {
                         bottom: "auto",
                         marginRight: "-50%",
                         transform: "translate(-50%, -50%)",
-                        width: "20%",
                         padding: "20px",
                         borderRadius: "10px",
                     },

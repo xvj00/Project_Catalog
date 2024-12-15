@@ -1,66 +1,54 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import data from "../dataImg";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import {Swiper, SwiperSlide} from "swiper/react";  // Импортируем Swiper и SwiperSlide
+import {Navigation, Autoplay} from "swiper/modules";  // Импортируем модули Navigation и Autoplay
+import "swiper/css";  // Основные стили
+import "swiper/css/navigation";  // Стили для навигации
+import "swiper/css/pagination";  // Если нужна пагинация
 import './style/Slider.css';
+import {FiChevronLeft, FiChevronRight} from "react-icons/fi"; // Ваши кастомные стили
 
 const Slider = () => {
-    const [sliderImage, setSliderImage] = useState(data);
-    const [index, setIndex] = useState(0);
-
-    const handlePrev = () => {
-        setIndex((prevState) => (prevState - 1 + sliderImage.length) % sliderImage.length);
-    };
-
-    const handleNext = () => {
-        setIndex((prevState) => (prevState + 1) % sliderImage.length);
-    };
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prevState) => (prevState + 1) % sliderImage.length);
-        }, 10000);
-
-        return () => clearInterval(interval); // Очистка таймера при размонтировании компонента
-    }, [sliderImage.length]);
-
-
-
     return (
         <div className="Slider">
-            {/* Контейнер с ограниченной шириной для кнопок */}
-            <div className="size slider-navigation">
-                <button className="prev" onClick={handlePrev}>
-                    <FiChevronLeft />
-                </button>
-                <button className="next" onClick={handleNext}>
-                    <FiChevronRight />
-                </button>
-            </div>
-            {/* Контейнер для изображения */}
-            <div className="Slider-container">
-                {sliderImage.map((sliderImage, sliderImageIndex) => {
-                    const { id, image, alt } = sliderImage;
-                    let position = "nextSlide";
-
-                    if (sliderImageIndex === index) {
-                        position = "activeSlide";
-                    }
-                    if (
-                        sliderImageIndex === index - 1 ||
-                        (index === 0 && sliderImageIndex === sliderImage.length - 1)
-                    ) {
-                        position = "lastSlide";
-                    }
-
+            <Swiper
+                modules={[Navigation, Autoplay]}  // Передаем модули
+                spaceBetween={50}  // Пространство между слайдами
+                slidesPerView={1}  // Показываем один слайд за раз
+                navigation={{
+                    prevEl: ".prev",  // Кнопка "Назад"
+                    nextEl: ".next",  // Кнопка "Вперед"
+                }}
+                breakpoints={true}
+                loop={true}
+                autoplay={{
+                    delay: 10000,  // Задержка автопрокрутки
+                    disableOnInteraction: false,  // Не останавливать автопрокрутку при взаимодействии
+                }}
+            >
+                {data.map((sliderImage) => {
+                    const {id, image, alt} = sliderImage;
                     return (
-                        <img
-                            key={id}
-                            src={image}
-                            alt={alt}
-                            className={`slider-image ${position}`}
-                        />
+                        <SwiperSlide key={id}>
+                            <img
+                                src={image}
+                                alt={alt}
+                                className="slider-image"
+                            />
+                        </SwiperSlide>
                     );
                 })}
+            </Swiper>
+            {/* Контейнер с кнопками навигации */}
+            <div className="slider-navigation size">
+                <button className="prev">
+                    <FiChevronLeft/>
+                </button>
+                <button className="next">
+                    <FiChevronRight/>
+                </button>
             </div>
+
         </div>
     );
 };

@@ -1,66 +1,87 @@
+/* Слайдер */
 .Slider {
     position: relative;
-    min-height: 300px;
-    height: 800px; /* Высота слайдера */
+    width: 100%;
+    height: 60vh; /* Высота слайдера — 60% от высоты экрана */
+    overflow: hidden;
+}
+
+/* Контейнер для изображений */
+.swiper-container {
+    width: 100%;
+    height: 60vh; /* Убираем фиксированную высоту */
+}
+
+/* Стили для слайдов */
+.swiper-slide {
+    width: 100%;
+    height: 60vh;
     display: flex;
     justify-content: center;
-    overflow: hidden; /* Скрыть элементы, выходящие за пределы контейнера */
+    align-items: center;
 }
 
-.Slider-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
+/* Стили для изображений */
 .slider-image {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Масштабирование изображения, сохраняя пропорции */
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    height: 60vh; /* Изображения должны быть на всю высоту */
+    object-fit: cover;
 }
 
-.activeSlide {
-    opacity: 1; /* Показать активный слайд */
-    z-index: 10; /* Переместить на передний план */
-}
-
-.lastSlide {
-
-    z-index: 1;
-}
-
-.nextSlide {
-
-    z-index: 1;
-}
 /* Контейнер для навигации */
 .slider-navigation {
     position: absolute;
-    top: 50%;
-    width: 100%;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
     z-index: 15;
-    padding: 0 20px;
-}
-/* Кнопки навигации */
-button.prev, button.next {
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    padding: 10px;
-    cursor: pointer;
-    transition: background 0.3s;
-    border-radius: 5px;
 }
 
-button.prev:hover, button.next:hover {
-    background: rgba(0, 0, 0, 0.8);
+.prev, .next{
+    background-color: rgba(6,6,6,0.4)
+}
+.prev:hover, .next:hover{
+    background-color:rgba(6,6,6,0.8)
+}
+
+/* Кнопки навигации */
+
+
+/* Скрываем стандартные кнопки навигации от Swiper */
+.swiper-button-next, .swiper-button-prev {
+    display: none;
+}
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .Slider {
+        height: 50vh; /* Меньше высота на мобильных устройствах */
+    }
+
+    .slider-navigation {
+        top: 90%; /* Немного выше для мобильных */
+    }
+
+    .prev, .next {
+        font-size: 1.5rem; /* Уменьшаем размер кнопок */
+        padding: 8px; /* Уменьшаем отступы */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Slider {
+        height: 40vh; /* Еще меньше высота на очень маленьких экранах */
+    }
+
+    .slider-navigation {
+        top: 55%; /* Поднимаем кнопки для еще меньших экранов */
+    }
+
+    .prev, .next {
+        font-size: 1.2rem; /* Еще меньше размер кнопок */
+        padding: 6px; /* Уменьшаем отступы */
+    }
 }
