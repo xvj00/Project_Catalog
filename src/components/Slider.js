@@ -13,7 +13,6 @@ const Slider = () => {
         <div className="Slider">
             <Swiper
                 modules={[Navigation, Autoplay]}  // Передаем модули
-                spaceBetween={50}  // Пространство между слайдами
                 slidesPerView={1}  // Показываем один слайд за раз
                 navigation={{
                     prevEl: ".prev",  // Кнопка "Назад"

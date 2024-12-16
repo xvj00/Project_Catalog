@@ -24,7 +24,7 @@ function App() {
                 <Route path="/promotion" element={<PromotionPage/>}/>
                 <Route path="/partners" element={<PartnerPage/>}/>
                 <Route path="/location" element={<LocationPage/>}/>
-                {/* Ваши другие маршруты можно добавить сюда, например: */}
+
             </Routes>
 
 

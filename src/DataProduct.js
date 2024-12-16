@@ -160,13 +160,31 @@ const products = [
         price: 1530,
         sale: false,
         new: false,
+    },
+    {
+        id: 19,
+        name: 'Optimum Nutrition Протеины',
+        rating: 5,
+        price: 3250,
+        description: "Optimum Nutrition — это одна из ведущих мировых марок спортивного питания, известная своими высококачественными продуктами, предназначенными для оптимизации физических результатов и поддержания здоровья. В линейке протеинов Optimum Nutrition представлены различные виды белка, включая сывороточный (Whey), казеин и растительные протеины.",
+        sale: true,
+        new: false,
+    },
+    {
+        id: 20,
+        name: 'PowerBar Изотоники',
+        rating: 4,
+        price: 970,
+        description: "PowerBar Изотоники - это высокоэффективные спортивные напитки, разработанные для поддержания оптимального водно-солевого баланса и быстрого восполнения энергетических запасов во время физических нагрузок. Эти напитки содержат сбалансированный комплекс углеводов, электролитов и других важных нутриентов, необходимых для повышения выносливости и работоспособности.",
+        sale: true,
+        new: false,
     }
 
 ]
 
 products.forEach(product => {
     if (product.name.includes('Протеины')) {
-        product.image = '/img/protein.png';
+        product.image = ['/img/protein.png', '/img/orig.png'];
         product.settings = [{
             type: 'Протеин',
             vkys: 'Банан',
@@ -174,7 +192,7 @@ products.forEach(product => {
             format: 'Порошок'
         }];
     } else if (product.name.includes('Креатин')) {
-        product.image = '/img/image.png';
+        product.image = ['/img/image.png'];
         product.settings = [{
             type: 'Креатин',
             vkys: 'Апельсин',
@@ -182,7 +200,7 @@ products.forEach(product => {
             format: 'Порошок'
         }];
     } else if (product.name.includes('BCAA')) {
-        product.image = '/img/bcaa.png';
+        product.image = ['/img/bcaa.png'];
         product.settings = [{
             type: 'BCAA',
             vkys: 'Апельсин',
@@ -191,7 +209,7 @@ products.forEach(product => {
         }];
 
     } else if (product.name.includes('Аминокислоты')) {
-        product.image = '/img/amino.png';
+        product.image = ['/img/amino.png'];
         product.settings = [{
             type: 'BCAA',
             vkys: 'Апельсин',
@@ -199,7 +217,7 @@ products.forEach(product => {
             format: 'Порошок'
         }];
     } else if (product.name.includes('Гейнер')) {
-        product.image = '/img/gainer.png' ;
+        product.image = ['/img/gainer.png'];
         product.settings = [{
             type: 'Гейнер',
             vkys: 'Апельсин',
@@ -207,7 +225,7 @@ products.forEach(product => {
             format: 'Порошок'
         }];
     } else if (product.name.includes('Изотоники')) {
-        product.image = '/img/iso.png';
+        product.image = ['/img/iso.png'];
         product.settings = [{
             type: 'BCAA',
             vkys: 'Апельсин',

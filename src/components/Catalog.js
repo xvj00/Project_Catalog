@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import products from "../DataProduct";
 import {Link} from "react-router-dom";
 import "./style/Catalog.css"
@@ -36,12 +36,17 @@ const Catalog = ({searchQuery}) => {
                             {product.new && <span className="badge-new badge">Новинка!</span>}
                             {product.sale && <span className="badge-sale badge">Распродажа!</span>}
                         </p>
-                        <img src={product.image} alt={product.name} className="product-image"/>
+                        <img src={product.image[0]} alt={product.name} className="product-image"/>
 
 
                         <h3>{product.name}</h3>
                         <div className="rating">
-                            {'★'.repeat(product.rating)}{'☆'.repeat(5 - product.rating)}
+                            {Array.from({length: product.rating}).map((_, index) => (
+                                <img key={index} src="/img/StarFill.svg" alt="filled star"/>
+                            ))}
+                            {Array.from({length: 5 - product.rating}).map((_, index) => (
+                                <img key={index + product.rating} src="/img/starLine.svg" alt="empty star"/>
+                            ))}
                         </div>
                         <div className="price_buttons">
                             <p>{product.price} ₽</p>
