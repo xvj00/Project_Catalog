@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-h{
+h1, h2, h3{
     font-family: "Montserrat", sans-serif;
 }
 
@@ -374,6 +374,7 @@ h2 {
     text-align: right;
     margin: 100px  auto;
 }
+
 .blocks{
     margin: 100px  auto;
 }
@@ -400,6 +401,7 @@ h2 {
 .divider{
     margin:100px auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     flex-direction: row-reverse;
 }
@@ -517,10 +519,9 @@ h2 {
 
 
 
+
+
 @media (max-width: 1000px) {
-    .size{
-        max-width: 500px;
-    }
 
     h1, .page-title, .hero-txt h1{
         font-size: 60px;
@@ -539,6 +540,9 @@ h2 {
         padding: 20px;
         left: 0;
         right: 0;
+    }
+    .image-thumbnails{
+        flex-direction: row;
     }
 
 
@@ -562,8 +566,11 @@ h2 {
         width: auto;
         padding: 20px;
     }
+    .product-image-full{
+        height: auto;
+    }
 
-    .partner-hero p, .promotions-hero p, .about-hero p, .company-values p, .page-text_container p, .leader-text p, .divider-line, .divider img, .leader img, .page-text_container, contact-box p, contact-box h2{
+    .partner-hero p, .promotions-hero p, .about-hero p, .company-values p, .page-text_container p, .leader-text p, .divider-line, .divider img, .leader img, .page-text_container, contact-box p, contact-box h2, .product-image-full{
         width: 100%;
     }
 

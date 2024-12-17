@@ -59,7 +59,8 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                <div className="assortiment size reveal">
+                <div className="divider size reveal">
+
                     <div>
                         <h2 className="page-subtitle">Наш ассортимент</h2>
                         <p className="page-text">
@@ -68,6 +69,7 @@ const AboutPage = () => {
                             здорового перекуса.
                         </p>
                     </div>
+                    <img src="/img/foraboutus.png"/>
                 </div>
                 <div className="blocks size reveal">
                     <iframe

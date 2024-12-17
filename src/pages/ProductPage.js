@@ -22,15 +22,15 @@ const ProductPage = () => {
             <form id="contactForm">
                 <div className="form-group">
                     <label htmlFor="name">Имя:</label>
-                    <input type="text" id="name" name="name" required minLength="2"/>
+                    <input type="text" id="name" name="name" required minLength="2" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="phone">Номер телефона:</label>
-                    <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9\-\s]+$"/>
+                    <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9\-\s]+$" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">Электронная почта:</label>
-                    <input type="email" id="email" name="email" required/>
+                    <input type="email" id="email" name="email" required />
                 </div>
                 <div className="modal-footer">
                     <button type="button" id="closeModal" onClick={closeModal} className="btn btn-close">Закрыть</button>
@@ -44,13 +44,9 @@ const ProductPage = () => {
         return <div>Продукт не найден.</div>; // Обработка случая, если продукт не найден
     }
 
-    // Функции для смены основного изображения
-    const handleMouseEnter = (image) => {
-        setMainImage(image); // Меняем основное изображение при наведении
-    };
-
-    const handleMouseLeave = () => {
-        setMainImage(product.image[0]); // При уходе с миниатюры возвращаем первое изображение
+    // Функция для смены основного изображения по клику
+    const handleThumbnailClick = (image) => {
+        setMainImage(image); // Устанавливаем изображение как основное
     };
 
     return (
@@ -63,26 +59,22 @@ const ProductPage = () => {
                                 key={index}
                                 src={image}
                                 alt={`thumbnail ${index}`}
-                                className="thumbnail"
-                                onMouseEnter={() => handleMouseEnter(image)} // Меняем основное изображение при наведении
-                                onMouseLeave={handleMouseLeave} // Возвращаем основное изображение
+                                className={`thumbnail ${image === mainImage ? 'active' : ''}`} // Добавляем класс для активного изображения
+                                onClick={() => handleThumbnailClick(image)} // Меняем основное изображение по клику
                             />
                         ))}
                     </div>
                     {/* Отображаем основное изображение */}
-                        <img src={mainImage} alt={product.name} className="product-image-full"/>
-
-                    {/* Блок с миниатюрами изображений */}
-
+                    <img src={mainImage} alt={product.name} className="product-image-full" />
 
                     <div className="product-info">
                         <h1>{product.name}</h1>
                         <div className="rating">
-                            {Array.from({length: product.rating}).map((_, index) => (
-                                <img key={index} src="/img/StarFill.svg" alt="filled star"/>
+                            {Array.from({ length: product.rating }).map((_, index) => (
+                                <img key={index} src="/img/StarFill.svg" alt="filled star" />
                             ))}
-                            {Array.from({length: 5 - product.rating}).map((_, index) => (
-                                <img key={index + product.rating} src="/img/starLine.svg" alt="empty star"/>
+                            {Array.from({ length: 5 - product.rating }).map((_, index) => (
+                                <img key={index + product.rating} src="/img/starLine.svg" alt="empty star" />
                             ))}
                         </div>
                         <p>
@@ -110,14 +102,15 @@ const ProductPage = () => {
                             </button>
                         </div>
                     </div>
-
                 </div>
             </div>
             <Modal
                 style={{
                     overlay: {
                         backgroundColor: "rgba(0, 0, 0, 0.5)",
+                        transition: "opacity 0.5s ease",
                     },
+
                     content: {
                         top: "50%",
                         left: "50%",

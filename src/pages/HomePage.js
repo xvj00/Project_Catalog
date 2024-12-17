@@ -5,7 +5,7 @@ import Filter from "../components/Filter";
 import Slider from "../components/Slider";
 
 const HomePage = () => {
-    const [searchQuery, setSearchQuery] = useState(''); // Стейт для поиска
+    const [filters, setFilters] = useState({ category: '', minPrice: '', maxPrice: '' });
 
     useEffect(() => {
         // Инициализация ScrollReveal
@@ -17,13 +17,9 @@ const HomePage = () => {
         });
     }, []);
 
-    const handleSearch = (query) => {
-        setSearchQuery(query); // Обновление поискового запроса при выборе категории
-        console.log('Фильтрация по:', query);
-    };
-
-    const handleReturn = () => {
-        setSearchQuery(''); // Очистка поиска
+    const handleFilterChange = (newFilters) => {
+        setFilters(newFilters); // Обновляем фильтры из компонента Filter
+        console.log('Текущие фильтры:', newFilters);
     };
 
     return (
@@ -34,13 +30,10 @@ const HomePage = () => {
 
             <div className="catalog-container size">
                 {/* Компонент фильтрации */}
-                <Filter
-                    onSearch={handleSearch}
-                    onReturn={handleReturn}
-                />
+                <Filter onFilter={handleFilterChange} />
 
-                {/* Каталог товаров с фильтрацией */}
-                <Catalog searchQuery={searchQuery} />
+                {/* Каталог товаров с учетом фильтров */}
+                <Catalog filters={filters} />
             </div>
         </div>
     );
